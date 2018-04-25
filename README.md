@@ -24,8 +24,8 @@ Hadoop Distributed File System and Mapreduce
 ![Image](/images/6.png)  ![Image](/images/7.png)
 
 四、最重要的环节
-```
   vi /etc/sysconfig/network-scripts/ifcfg-eth0
+ ```
   DEVICE="eth0"
   BOOTPROTO="static"
   HWADDR="00:0C:29:5B:67:42"(这个地址每个虚拟机都不同，默认的是正确的，不要修改)
