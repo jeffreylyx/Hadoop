@@ -35,12 +35,9 @@ OK，成功设置静态IP。
 ### 2.配置各台虚拟机之间的ssh
 一、修改机器名  
 vi /etc/sysconfig/network   
-
-修改hostname    
-
+修改hostname  
 二、关闭防火墙    
 chkconfig iptables off    
-
 三、修改hosts文件    
 vi /etc/hosts   
 添加机器名以及IP,类似于 master 192.168.1.60  
