@@ -1,8 +1,6 @@
 # Hadoop
 Hadoop Distributed File System and Mapreduce
 ## 环境搭建
-----
-
 | 虚拟机系统 | 机器名称 | IP地址|
 
 |表头1  | 表头2|
