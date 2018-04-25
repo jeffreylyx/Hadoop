@@ -32,5 +32,20 @@ vi /etc/sysconfig/network-scripts/ifcfg-eth0
   UUID="cbee3985-9e8a-46dd-b557-506e8ad261d3"
 ```   
 OK，成功设置静态IP。
+### 2.配置各台虚拟机之间的ssh
+一、修改机器名  
+vi /etc/sysconfig/network  
+修改hostname  
+二、关闭防火墙  
+chkconfig iptables off  
+三、修改hosts文件  
+vi /etc/hosts   
+添加机器名以及IP,类似于 master 192.168.1.60  
+windows也需要修改：C:\Windows\System32\drivers\etc\hosts  
+四、创建用户组  
+我直接用的root，还是root用起来最直接：）  
+五、配置SSH
+
+
 
 
