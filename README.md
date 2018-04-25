@@ -41,7 +41,7 @@ chkconfig iptables off(永久关闭)
 三、修改hosts文件   
 vi /etc/hosts  
 添加机器名以及IP,类似于 master 192.168.1.60  
-windows也需要修改：C:\Windows\System32\drivers\etc\hosts
+windows也需要修改：C:\Windows\System32\drivers\etc\hosts  
 四、创建用户组  
 我直接用的root，还是root用起来最直接：)  
 五、配置SSH
