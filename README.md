@@ -11,7 +11,7 @@ Hadoop Distributed File System and Mapreduce
 |Centos 6.5|slave4|192.168.1.64|
 
 ### 1.配置每台虚拟机的静态IP
-1安装好虚拟后在菜单栏选择编辑→ 虚拟网络编辑器，打开虚拟网络编辑器对话框，选择Vmnet8 Net网络连接方式，随意设置子网IP，点击NAT设置页面，查看子网掩码和网关，后面修改静态IP会用到。
+一、安装好虚拟后在菜单栏选择编辑→ 虚拟网络编辑器，打开虚拟网络编辑器对话框，选择Vmnet8 Net网络连接方式，随意设置子网IP，点击NAT设置页面，查看子网掩码和网关，后面修改静态IP会用到。
 
 ![Image](/images/1.png)  ![Image](/images/2.png)  ![Image](/images/3.png)
 
@@ -22,3 +22,19 @@ Hadoop Distributed File System and Mapreduce
 三、在虚拟机右下角，点击网络适配器按钮，右键选择断开连接，然后再重新连接，确保刚才的设置生效。然后开启虚拟机，输入ifcfg查看当前分配的IP。
 
 ![Image](/images/6.png)  ![Image](/images/7.png)
+
+四、最重要的环节
+vi /etc/sysconfig/network-scripts/ifcfg-eth0
+DEVICE="eth0"
+BOOTPROTO="static"
+HWADDR="00:0C:29:5B:67:42"(这个地址每个虚拟机都不同，默认的是正确的，不要修改)
+IPADDR=192.168.1.60
+NETMASK=255.255.255.0
+DNS1=192.168.1.2
+GATEWAY=192.168.1.2
+IPV6INIT="yes"
+NM_CONTROLLED="yes"
+ONBOOT="yes"
+TYPE="Ethernet"
+UUID="cbee3985-9e8a-46dd-b557-506e8ad261d3"
+OK，成功设置静态IP。
