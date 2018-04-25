@@ -13,4 +13,12 @@ Hadoop Distributed File System and Mapreduce
 ### 1.配置每台虚拟机的静态IP
 1安装好虚拟后在菜单栏选择编辑→ 虚拟网络编辑器，打开虚拟网络编辑器对话框，选择Vmnet8 Net网络连接方式，随意设置子网IP，点击NAT设置页面，查看子网掩码和网关，后面修改静态IP会用到。
 
-![Image](/images/1.png)
+![Image](/images/1.png)  ![Image](/images/2.png)  ![Image](/images/3.png)
+
+二、检查宿主机VM8 网卡设置，打开网络和共享中心→ 更改适配器设置→，在VMware Network Adapter VMnet8上单击右键，选择属性按钮打开属性对话框。（这个在服务器上修改了，但是没啥用，还是无法上网，但是能满足局域网内其他计算机能连接服务器上的虚拟机就好了）
+
+![Image](/images/4.png)  ![Image](/images/5.png)
+
+三、在虚拟机右下角，点击网络适配器按钮，右键选择断开连接，然后再重新连接，确保刚才的设置生效。然后开启虚拟机，输入ifcfg查看当前分配的IP。
+
+![Image](/images/6.png)  ![Image](/images/7.png)
