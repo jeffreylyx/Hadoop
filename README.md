@@ -48,6 +48,8 @@ windows也需要修改：C:\Windows\System32\drivers\etc\hosts
 ssh -keygen -t rsa 后面直接回车  
 会生成/root/.ssh目录，将目录里的公钥id_rsa.pub复制为authorized_keys，依次分发到各个从机中  
 ### 3.安装JDK,HADOOP,ZOOKEEPER和HBASE
-
+直接下载各个文件的压缩包tar.gz解压到各个文件夹，修改/etc/profile，并且source /etc/profile使其生效  
+/etc/profile：<br>
+s1
 
 
