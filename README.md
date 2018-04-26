@@ -62,6 +62,20 @@ hadoop version<br>
 修改master和slaves文件<br>
 配置好后依次发到各个从机中，启动前在主机输入bin/hadoop namenode -format格式化<br>
 
+#### zookeeper配置文件
+/zookeeper/conf/zoo.cfg<br>
+在zookeeper目录下新建一个data文件夹，该文件夹的路径与zoo.cfg中配置的dataDir保持一致，在data文件夹中创建一个myid的文件，根据zoo.cfg中写入的集群信息在myid中写入相应的1或2或3。<br>
+`注意：每台从机的myid中的序号都不一样`
 
+#### hbase配置文件
+/hbase/conf/hbase-env.sh<br>
+/hbase/conf/hbase-site.xml<br>
+复制hadoop中的hdfs-site.xml到conf文件夹下<br>
+在regionservers文件中写入datanode的主机名<br>
+更换/hbase/lib下的jar包（可能版本不匹配）
 
+#### 启动查看命令
+hadoop:master:50070 查看内存<br>
+hadoop:master:8088 查看任务执行列表<br>
+hbase:master:60010 查看hbase<br>
 
