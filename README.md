@@ -45,7 +45,7 @@ windows也需要修改：C:\Windows\System32\drivers\etc\hosts
 四、创建用户组  
 我直接用的root，还是root用起来最直接：)  
 五、配置SSH  
-ssh -keygen -t rsa 后面直接回车  
+ssh -keygen -t rsa 后面直接回车  
 会生成/root/.ssh目录，将目录里的公钥id_rsa.pub复制为authorized_keys，依次分发到各个从机中  
 ### 3.安装JDK,HADOOP,ZOOKEEPER和HBASE
 
