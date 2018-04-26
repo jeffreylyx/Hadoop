@@ -49,7 +49,19 @@ ssh -keygen -t rsa 后面直接回车
 会生成/root/.ssh目录，将目录里的公钥id_rsa.pub复制为authorized_keys，依次分发到各个从机中  
 ### 3.安装JDK,HADOOP,ZOOKEEPER和HBASE
 直接下载各个文件的压缩包tar.gz解压到各个文件夹，修改/etc/profile，并且source /etc/profile使其生效  
-/etc/profile：<br>
-s1
+/etc/profile已上传<br>
+环境配置好后检查是否生效：<br>
+java -version<br>
+javac -version<br>
+hadoop version<br>
+#### hadoop需要修改的配置文件
+/etc/hadoop/hadoop-env.sh<br>
+/etc/hadoop/core-site.xml<br>
+/etc/hadoop/hdfs-site.xml<br>
+/etc/hadoop/mapred-site.xml<br>
+修改master和slaves文件<br>
+配置好后依次发到各个从机中，启动前在主机输入bin/hadoop namenode -format格式化<br>
+
+
 
 
